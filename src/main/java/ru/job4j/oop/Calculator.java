@@ -25,10 +25,8 @@ public class Calculator {
     }
 
     public static void main(String[] args) {
-        int result = Calculator.sum(10);
-        System.out.println(result);
-        result = Calculator.minus(10);
-        System.out.println(result);
+        System.out.println(Calculator.sum(10));
+        System.out.println(Calculator.minus(10));
         Calculator calculator = new Calculator();
         System.out.println(calculator.multiply(10));
         System.out.println(calculator.divide(10));
