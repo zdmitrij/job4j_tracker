@@ -16,7 +16,7 @@ public class PointTest {
     }
 
     @Test
-    public void when978and031Then12083() {
+    public void when978and031Then12dot083() {
         Point a = new Point(9, 7, 8);
         Point b = new Point(0, 3, 1);
         double rsl = a.distance3d(b);
