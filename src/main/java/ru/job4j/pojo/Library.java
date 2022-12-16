@@ -18,8 +18,7 @@ public class Library {
         }
         System.out.println();
         System.out.println("0 and 3 indexes are changed");
-        Book empty;
-        empty = books[0];
+        Book empty = books[0];
         books[0] = books[3];
         books[3] = empty;
         for (int index = 0; index < books.length; index++) {
@@ -29,7 +28,7 @@ public class Library {
         System.out.println();
         System.out.println("Selected only \"Clean code\" ");
         for (int index = 0; index < books.length; index++) {
-            if (books[index].getName() == "Clean code") {
+            if ("Clean code".equals(books[index].getName())) {
                 System.out.println("\tClean code is book with index " + index + " and  it contain "
                         + books[index].getPage() + " pages");
             }
