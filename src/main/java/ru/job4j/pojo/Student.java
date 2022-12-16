@@ -26,7 +26,7 @@ public class Student {
         this.group = group;
     }
 
-    public void setEntrance() {
+    public void setEntrance(Date entrance) {
         this.entrance = entrance;
     }
 }
