@@ -11,6 +11,11 @@ public class Tracker {
         return item;
     }
 
+    public Item[] findAll(){
+
+
+    }
+
     public Item findById(int id) {
         Item rsl = null;
         for (int index = 0; index < size; index++) {
