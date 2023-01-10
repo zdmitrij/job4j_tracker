@@ -1,7 +1,7 @@
 package ru.job4j.ex;
 
 public class Fact {
-    public static int calc(int n) {
+    public static int calc(int n) throws IllegalArgumentException {
         if (n < 0) {
             throw new IllegalArgumentException("N could not be less then 0");
         }
@@ -12,7 +12,7 @@ public class Fact {
         return rsl;
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws java.lang.IllegalArgumentException {
         new Fact().calc(-1);
     }
 }
