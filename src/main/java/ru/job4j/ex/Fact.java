@@ -12,7 +12,7 @@ public class Fact {
         return rsl;
     }
 
-    public static void main(String[] args) throws java.lang.IllegalArgumentException {
+    public static void main(String[] args) throws IllegalArgumentException {
         new Fact().calc(-1);
     }
 }
