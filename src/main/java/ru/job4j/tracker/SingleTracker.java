@@ -42,4 +42,13 @@ public final class SingleTracker {
     public boolean delete(int id) {
         return tracker.delete(id);
     }
+
+    public static void main(String[] args) {
+        SingleTracker tracker = SingleTracker.getInstance();
+        tracker.findById(1);
+        tracker.findAll();
+        tracker.findByName("Item4");
+        tracker.indexOf(2);
+        tracker.delete(1);
+    }
 }
