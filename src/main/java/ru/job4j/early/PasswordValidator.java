@@ -3,8 +3,9 @@ package ru.job4j.early;
 import static java.lang.Character.*;
 
 public class PasswordValidator {
+   private static String message;
 
-    public static String validate(String password, String message) {
+   public static String validate(String password) {
         if (password == null) {
             throw new IllegalArgumentException("Password can't be null");
         }
@@ -40,7 +41,7 @@ public class PasswordValidator {
     }
 
     public static boolean noSymbolsOrDigitsOrSpecs(String password) {
-        final  String message;
+
         boolean noUpperCase = true;
         boolean noLowerCase = true;
         boolean noDigit = true;
@@ -48,23 +49,33 @@ public class PasswordValidator {
         for (int i = 0; i < password.length(); i++) {
             if (isUpperCase(password.codePointAt(i))) {
                 noUpperCase = false;
-                message = "Password should contain at least one uppercase letter";
             }
             if (isLowerCase(password.codePointAt(i))) {
                 noLowerCase = false;
-                message = "Password should contain at least one lowercase letter";
             }
             if (isDigit(password.codePointAt(i))) {
                 noDigit = false;
-                message = "Password should contain at least one figure";
             }
             if (isSpecialCase(password.codePointAt(i))) {
                 noSpecialCase = false;
-                message = "Password should contain at least one special symbol";
             }
         }
 
         boolean rsl = (noUpperCase || noLowerCase || noDigit || noSpecialCase);
+
+        if (noUpperCase) {
+            message = "Password should contain at least one uppercase letter";
+        }
+        if (noLowerCase) {
+            message = "Password should contain at least one lowercase letter";
+        }
+        if (noDigit) {
+            message = "Password should contain at least one figure";
+        }
+        if (noSpecialCase) {
+            message = "Password should contain at least one special symbol";
+        }
+
         return rsl;
     }
 }
